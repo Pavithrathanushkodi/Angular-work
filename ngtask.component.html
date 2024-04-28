@@ -1,0 +1,82 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-lg-3 first-col">
+      <div class="button">
+        <button type="button" (click)="toggleVisibility('button1')">
+          <i class="bi bi-bank2 icon"></i>
+        </button>
+        <button type="button" (click)="toggleVisibility('button2')">
+          <i class="bi bi-amazon icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-lg-9 second-col">
+      <div *ngIf="currentPage == 'button1'">
+        <div class="item">
+          <ul>
+            <li *ngFor="let list of item">
+              <a *ngIf="list.type == 'link'">{{ list.fruit }}</a>
+              <button class="btn btn-primary" *ngIf="list.type == 'button'">
+                {{ list.fruit }}
+              </button>
+              <img *ngIf="list.type == 'image'" src="{{ list.fruit }}" />
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                *ngIf="list.type == 'dropdown'"
+              >
+                {{ list.fruit }}
+              </button>
+              <ul class="dropdown-menu">
+                <li *ngFor="let menu of list.dropdownmenu">{{ menu }}</li>
+                
+              </ul>
+            </li>
+
+            <!-- <li [ngClass]="{'button-type': list.type== 'button', 'link': list.type == 'link' }">{{list.type}}</li> -->
+          </ul>
+        </div>
+      </div>
+
+
+      
+
+      <div *ngIf="currentPage == 'button2'">
+        <div class="container">
+          <h2>Students Information</h2>
+
+          <div class="center-table">
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th *ngFor="let heading of table; let i = index">
+                    {{ heading.heading }}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let student of students; let i = index">
+                  <td>{{ student.name }}</td>
+                  <td>{{ student.regno }}</td>
+
+                  <td [ngStyle]="{ 'background-color': student.color }"></td>
+                  <td
+                    [ngClass]="{
+                      'text-green': student.age < 20,
+                      'text-red': student.age >= 20
+                    }"
+                  >
+                    {{ student.age }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

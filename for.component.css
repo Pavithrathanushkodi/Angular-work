@@ -1,0 +1,16 @@
+.list{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    color:blueviolet;
+}
+h1{
+    text-align: center;
+}
+.table{
+    text-align: center;
+    border-style:solid;
+    border-color: beige;
+    border-radius: 1px;
+    font-size: 30px;
+}

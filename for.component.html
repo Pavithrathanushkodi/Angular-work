@@ -1,0 +1,18 @@
+<p>for works!</p>
+<h1>Favourite shop In Thiruvarur</h1>
+<div class="list" *ngFor="let shops of thiruvarur">
+    {{shops}}
+</div>
+
+<!-- ngfor object -->
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>address</th>
+    </tr>
+<tr *ngFor="let details of shops">
+    <td>{{details.name}}</td>
+    <td>{{details.address}}</td>
+</tr>
+</table>

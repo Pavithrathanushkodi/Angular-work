@@ -1,0 +1,21 @@
+<div class="container text-center">
+    <div class="row row-cols-1 row-cols-md-3 g-4" style>
+       
+      <div class="col-lg-3 card h-60 cards" [routerLink]="['/productdetails']"[queryParams]="{category: info.category,price: info.price}"
+       *ngFor="let info of product; let i=index" >
+            <img [src]="info.image" class="card-img-top" alt="...">
+    
+            <div class="card-body">
+              <h2>{{info.name}}</h2>
+              <h1>{{info.price}}</h1>
+            </div>
+            <div class="card-footer">
+              <p>{{info.category}}</p>
+            </div>
+          </div>
+          </div>
+          </div>
+        
+
+
+    

@@ -1,0 +1,29 @@
+.first-col{
+    background-color:blue;
+    height:600px;
+}
+.second-col{
+    background-color:antiquewhite;
+    height:600px;
+}
+.button{
+    font-size: 60px;
+    float:left;
+    margin:40px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.text-green{
+    color:green;
+}
+.text-red{
+   color:red;
+}
+.style{
+    padding-top: 20px;
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: darkslategray;
+}

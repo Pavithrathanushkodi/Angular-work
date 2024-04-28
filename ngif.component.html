@@ -1,0 +1,99 @@
+<div>
+  <h1>{{ title }}</h1>
+
+  <!-- *ngIf to toggle the login form -->
+  <div *ngIf="!showMessage">
+    <form class="form">
+      <table>
+        <tr>
+    <td><label>UserName</label></td>
+    </tr>
+    <tr>
+    <td><input type="text" id="userName" ><br></td>
+    </tr>
+    <tr>
+      <td>
+    <label>Password</label>
+    </td>
+    </tr>
+    <tr>
+    <td><input type="password" id="Password" ></td>
+  </tr>
+  <tr>
+    <button (click)="toggleMessage()">Log In</button><br></tr>
+    </table>
+    </form>
+  </div>
+
+  <!-- *ngIf to show the message conditionally -->
+  <div *ngIf="showMessage">
+    <p>Hello, {{ userName }}!</p>
+  </div>
+</div>
+
+
+
+
+
+<p>banner works!</p>
+<button type="button" (click)="toggleVisibility()" class="btn btn-success">Success</button>
+
+<div *ngIf="isVisible">
+
+  <div class="container text-center">
+    <div class="row">
+      <div class=" col-lg-2 service1">
+        <i class="bi bi-trophy"></i>
+        <h1>Tob rated Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis h
+          voluptate nisi ex hic aliquid recusandae voluptatibus quis fuga?
+        </p>
+        <button type="button" class="btn btn-secondary">Read More</button>
+      </div>
+      <div class="col-lg-2 service2">
+        <span class="material-symbols-outlined icons3"> payments </span>
+        <h1>Low Cost Services</h1>
+        <p>Lorem ipsum dolor sit, amet co-nsectetur adipisicing elit. Quam temporibus quia distinctio quod quaerat, </p>
+          <button type="button" class="btn btn-secondary">Read More</button>
+      </div>
+      <div class="col-lg-2 service3">
+        <i class="bi bi-calendar-check"></i>
+        <h1>Fastest Services</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus porro numquam ab consequuntur sit mollitia a
+          voluptatibus ut aliquid</p>
+          <button type="button" class="btn btn-secondary">Read More</button>
+
+      </div>
+    </div>
+    </div>
+    <div *ngIf="!isVisible">
+      <div class="container text-center">
+        <div class="row">
+          <div class=" col-lg-2 service1">
+            <i class="bi bi-trophy"></i>
+            <h1>Tob rated Services</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis h
+              voluptate nisi ex hic aliquid recusandae voluptatibus quis fuga?
+            </p>
+            <button type="button" class="btn btn-secondary">Read More</button>
+          </div>
+
+          <div class="col-lg-2 service2">
+
+          </div>
+          <div class="col-lg-2 service3">
+            <i class="bi bi-calendar-check"></i>
+            <h1>Fastest Services</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus porro numquam ab consequuntur sit mollitia a
+              voluptatibus ut aliquid</p>
+              <button type="button" class="btn btn-secondary">Read More</button>
+    
+          </div>
+        </div>
+
+    </div>
+
+    
+

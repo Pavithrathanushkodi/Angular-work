@@ -1,0 +1,22 @@
+<form class="styled-form" [formGroup]="firstForm" (ngSubmit)="onSubmit()">
+    <label>Name</label>
+    <input type="text" id="name" formControlName="name"  placeholder="name field" required><br>
+    <label>UserName</label>
+    <input type="text" id="name" formControlName="username" placeholder="username field" required><br>
+    <label>email</label>
+    <input type="email" id="email" formControlName="email"   placeholder="email field" required><br>
+    <label>Contact</label>
+    <input type="tel" id="number" formControlName="contact"   placeholder="Contact field" required><br>
+    <label for="Gender">Gender</label>
+    <select id="gender" formControlName="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select><br>
+    <label for="age">age</label>
+    <input type="radio" name="age"  value="Above 18">Above 18
+        <input type="radio" name="age" value="below 18">below 18<br>
+    <button type="submit">Submit</button>
+    <button type="button" (click)="clearform()">clear</button>
+    <button type="button" (click)="editdetails(item)">Edit</button>
+</form>
